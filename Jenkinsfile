@@ -11,7 +11,7 @@ pipeline {
 	
    // tools { 
 	// Global tools to be used by the pipeline
-     //   maven 'maven3.8' 
+     //   maven 'maven 3.8' 
        // jdk 'jdk8' 
    // }
 	
