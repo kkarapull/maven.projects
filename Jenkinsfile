@@ -11,8 +11,8 @@ pipeline {
 	
    tools { 
 	// Global tools to be used by the pipeline
-     maven 'maven3.8' 
-       jdk 'jdk8' 
+     maven 'maven3.6' 
+       jdk 'jdk9' 
    }
 	
     stages {
@@ -50,7 +50,7 @@ pipeline {
 	    // run Maven Build and upload the built artifact to Artifactory
             steps {
                 rtMavenRun (
-                    tool: "maven3.8", // Tool name from Jenkins configuration
+                    tool: "maven3.6", // Tool name from Jenkins configuration
                     pom: 'pom.xml',
                     goals: 'clean install',
                     deployerId: "MAVEN_DEPLOYER",
