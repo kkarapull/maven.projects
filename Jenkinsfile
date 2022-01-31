@@ -1,19 +1,19 @@
 pipeline {
-    // agent any
+    agent any
     
-	agent {
-        docker {
-            image 'maven:3.8.1-adoptopenjdk-11'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
-	
-	
-   // tools { 
-	// Global tools to be used by the pipeline
-     //   maven 'maven 3.8' 
-       // jdk 'jdk8' 
+	//agent {
+        //docker {
+         //   image 'maven:3.8.1-adoptopenjdk-11'
+         //   args '-v /root/.m2:/root/.m2'
+       // }
    // }
+	
+	
+   tools { 
+	// Global tools to be used by the pipeline
+     maven 'maven3.8' 
+       jdk 'jdk8' 
+   }
 	
     stages {
 	stage('Unit Tests') {
